@@ -12,6 +12,7 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [image, setImage] = useState(""); // State for Base64 image string
+  const [isImageValid, setIsImageValid] = useState(false); // State to check if the image is valid
 
   const navigate = useNavigate();
 
@@ -21,6 +22,12 @@ const SignUp = () => {
     // Validate password
     if (password.length < 8) {
       toast.error("Password must be at least 8 characters long");
+      return;
+    }
+
+    // Validate image
+    if (!isImageValid) {
+      toast.error("Please upload a valid image (size should not exceed 1MB)");
       return;
     }
 
@@ -63,11 +70,11 @@ const SignUp = () => {
       const reader = new FileReader();
       reader.onloadend = () => {
         setImage(reader.result.replace("data:", "").replace(/^.+,/, ""));
+        setIsImageValid(true);
       };
       reader.readAsDataURL(compressedFile);
     } catch (error) {
       console.error("Error during image compression", error);
-      toast.error("Error compressing image. Please try again.");
     }
   };
 
