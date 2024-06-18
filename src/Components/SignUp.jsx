@@ -28,7 +28,7 @@ const SignUp = () => {
 
     // Send a POST request to the backend API
     axios
-      .post("http://localhost:5000/signup", data)
+      .post("https://crick-backend.onrender.com/signup", data)
       .then((response) => {
         // Display toast message
         toast.success("User registered successfully");

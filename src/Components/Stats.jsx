@@ -11,7 +11,7 @@ const Stats = () => {
   useEffect(() => {
     setTimeout(() => {}, 2000);
     axios
-      .get("http://localhost:5000/profile")
+      .get("https://crick-backend.onrender.com/profile")
       .then((response) => {
         setProfileData(response.data);
         setTimeout(() => {

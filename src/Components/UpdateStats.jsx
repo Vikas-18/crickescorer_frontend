@@ -21,19 +21,22 @@ const UpdateStats = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/updateStats", {
-        password,
-        matches: Number(matches),
-        runs: Number(runs),
-        wickets: Number(wickets),
-        centuries: Number(centuries),
-        halfCenturies: Number(halfCenturies),
-        highestScore: Number(highestScore),
-        bestBowling,
-        sixes: Number(sixes),
-        fours: Number(fours),
-        catches: Number(catches),
-      });
+      const response = await axios.post(
+        "https://crick-backend.onrender.com/updateStats",
+        {
+          password,
+          matches: Number(matches),
+          runs: Number(runs),
+          wickets: Number(wickets),
+          centuries: Number(centuries),
+          halfCenturies: Number(halfCenturies),
+          highestScore: Number(highestScore),
+          bestBowling,
+          sixes: Number(sixes),
+          fours: Number(fours),
+          catches: Number(catches),
+        }
+      );
 
       toast.success(response.data.message);
     } catch (error) {

@@ -19,7 +19,7 @@ const Login = () => {
 
     // Send a POST request to the backend API
     axios
-      .post("http://localhost:5000/login", data)
+      .post("https://crick-backend.onrender.com/login", data)
       .then((response) => {
         // Navigate to the profile page with user data
         navigate("/profile", { state: { user: response.data.user } });
