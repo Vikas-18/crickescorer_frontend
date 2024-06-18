@@ -1,5 +1,5 @@
 .box {
-  background-image: url("C:\Users\HP\OneDrive\Desktop\crickescorer_frontend\public\images\field2.jpg");
+  background-image: image("./images/field2.jpg");
   background-size: cover;
   min-height: 100vh;
   display: flex;
