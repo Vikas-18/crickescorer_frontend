@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import "./CSS/updatestats.css";
 
@@ -16,7 +17,7 @@ const UpdateStats = () => {
   const [sixes, setSixes] = useState("");
   const [fours, setFours] = useState("");
   const [catches, setCatches] = useState("");
-
+  const navigate = useNavigate();
   const handleUpdateStats = async (e) => {
     e.preventDefault();
 
@@ -39,6 +40,12 @@ const UpdateStats = () => {
       );
 
       toast.success(response.data.message);
+      // Delay the redirect (adjust as needed)
+      setTimeout(() => {
+        console.log(response.data);
+        // Redirect to /profile route
+        navigate("/");
+      }, 3000); // 3 seconds delay
     } catch (error) {
       toast.error(error.response?.data?.msg || "Error updating stats");
     }
