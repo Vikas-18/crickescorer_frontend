@@ -2,7 +2,7 @@
   text-align: center;
 }
 .home {
-  background-image: image("./images/field.jpg");
+  background-image: url("./images/field.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;

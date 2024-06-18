@@ -1,5 +1,5 @@
 .box {
-  background-image: image("./images/field2.jpg");
+  background-image: url("./images/field2.jpg");
   background-size: cover;
   min-height: 100vh;
   display: flex;

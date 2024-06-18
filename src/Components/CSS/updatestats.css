@@ -13,7 +13,7 @@
 }
 
 .update-stats {
-  background-image: image("./images/field5");
+  background-image: url("./images/field5.jpg");
   background-size: cover;
   min-height: 100vh;
   display: flex;
