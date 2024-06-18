@@ -1,0 +1,71 @@
+.form-update {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  width: 18rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.update-stats {
+  background-image: url("C:\Users\HP\OneDrive\Desktop\CrickScorer\crickescorer_frontend\public\images\field5.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-stats h2 {
+  text-align: center;
+}
+
+.update-stats form div {
+  margin-bottom: 10px;
+}
+
+.update-stats form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.update-stats form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.update-stats form input.no-spinner::-webkit-outer-spin-button,
+.update-stats form input.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.update-stats form input.no-spinner {
+  -moz-appearance: textfield;
+}
+
+.update-stats form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.update-stats form button:hover {
+  background-color: #0056b3;
+}
+
+.update-stats p {
+  text-align: center;
+  color: green;
+}

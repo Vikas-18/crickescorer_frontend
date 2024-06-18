@@ -1,0 +1,18 @@
+.intro h2 {
+  text-align: center;
+}
+.home {
+  background-image: url("C:\Users\HP\OneDrive\Desktop\CrickScorer\crickescorer_frontend\public\images\field.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.bio p {
+  font-weight: 600;
+  color: #0c1844;
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 2rem;
+}
