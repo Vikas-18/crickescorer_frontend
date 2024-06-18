@@ -23,12 +23,12 @@ const Card = ({ player }) => {
         {renderStat("Matches", player.matches)}
         {renderStat("Runs", player.runs)}
         {renderStat("Wickets", player.wickets)}
-        {renderStat("Centuries", player.centuries)}
-        {renderStat("Half-Centuries", player.halfCenturies)}
+        {renderStat("100s", player.centuries)}
+        {renderStat("50s", player.halfCenturies)}
         {renderStat("Highest Score", player.highestScore)}
         {renderStat("Best Bowling", player.bestBowling)}
-        {renderStat("Sixes", player.sixes)}
-        {renderStat("Fours", player.fours)}
+        {renderStat("6s", player.sixes)}
+        {renderStat("4s", player.fours)}
         {renderStat("Catches", player.catches)}
       </div>
     </div>

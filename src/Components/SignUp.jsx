@@ -4,6 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import "./CSS/sign.css";
+import imageCompression from "browser-image-compression";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -47,13 +48,27 @@ const SignUp = () => {
   };
 
   // Function to handle file input change and convert to Base64
-  const handleImageChange = (e) => {
+  const handleImageChange = async (e) => {
     const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setImage(reader.result.replace("data:", "").replace(/^.+,/, ""));
+
+    // Options for image compression
+    const options = {
+      maxSizeMB: 1, // Adjust as needed
+      maxWidthOrHeight: 1024, // Adjust as needed
+      useWebWorker: true,
     };
-    reader.readAsDataURL(file);
+
+    try {
+      const compressedFile = await imageCompression(file, options);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result.replace("data:", "").replace(/^.+,/, ""));
+      };
+      reader.readAsDataURL(compressedFile);
+    } catch (error) {
+      console.error("Error during image compression", error);
+      toast.error("Error compressing image. Please try again.");
+    }
   };
 
   return (

@@ -92,7 +92,7 @@ const UpdateStats = () => {
           />
         </div>
         <div>
-          <h3>Centuries:</h3>
+          <h3>100s:</h3>
           <input
             type="number"
             value={centuries}
@@ -101,7 +101,7 @@ const UpdateStats = () => {
           />
         </div>
         <div>
-          <h3>Half Centuries:</h3>
+          <h3>50s:</h3>
           <input
             type="number"
             value={halfCenturies}
@@ -127,7 +127,7 @@ const UpdateStats = () => {
           />
         </div>
         <div>
-          <h3>Sixes:</h3>
+          <h3>6s:</h3>
           <input
             type="number"
             value={sixes}
@@ -136,7 +136,7 @@ const UpdateStats = () => {
           />
         </div>
         <div>
-          <h3>Fours:</h3>
+          <h3>4s:</h3>
           <input
             type="number"
             value={fours}
